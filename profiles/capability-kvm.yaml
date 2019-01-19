@@ -1,0 +1,10 @@
+config:
+  security.nesting: "true"
+  linux.kernel_modules: iptable_nat, ip6table_nat, ebtables, kvm, kvm_intel, tap
+devices:
+  kvm:
+    path: /dev/kvm
+    type: unix-char
+  tun:
+    path: /dev/net/tun
+    type: unix-char

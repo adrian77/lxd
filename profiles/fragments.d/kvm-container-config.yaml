@@ -1,0 +1,10 @@
+config:
+  user.user-data: |
+    #cloud-config
+    runcmd:
+    - dhclient eth0
+    - apt update
+    - apt install -yqq bridge-utils libvirt-bin qemu-kvm
+    - ip addr flush eth0
+    - ifup -a
+    - mv /etc/network/interfaces.d/50-cloud-init.cfg /etc/network/interfaces

@@ -1,0 +1,69 @@
+config:
+  security.nesting: "true"
+  linux.kernel_modules: iptable_nat, ip6table_nat, ebtables, openvswitch, kvm, kvm_intel, tap, vhost, vhost_net, vhost_scsi, vhost_vsock
+  user.network-config: |
+    version: 1
+    config:
+      - type: physical
+        name: eth0
+        subnets:
+          - control: manual
+      - type: bridge
+        name: br0
+        bridge_interfaces:
+          - eth0
+        params:
+          bridge_stp: 'off'
+          bridge_fd: 1
+        subnets:
+           - type: dhcp
+  user.network-config: |
+    version: 1
+    config:
+      - type: physical
+        name: eth0
+        subnets:
+           - type: manual
+             control: auto
+      - type: bridge
+        name: br0
+        subnets:
+           - type: dhcp
+             control: auto
+        bridge_interfaces:
+          - eth0
+        params:
+          bridge_stp: 'off'
+          bridge_fd: 1
+
+  user.user-data: |
+    #cloud-config
+    runcmd:
+    - dhclient eth0
+    - apt update
+    - apt install -yqq bridge-utils libvirt-bin qemu-kvm
+    - ip addr flush eth0
+    - ifup -a
+    - mv /etc/network/interfaces.d/50-cloud-init.cfg /etc/network/interfaces
+devices:
+  kvm:
+    path: /dev/kvm
+    type: unix-char
+  root:
+    path: /
+    pool: default
+    type: disk
+  tun:
+    path: /dev/net/tun
+    type: unix-char
+  vhost-net:
+    path: /dev/vhost-net
+    type: unix-char
+    mode: 0600
+  vhost-scsi:
+    path: /dev/vhost-scsi
+    type: unix-char
+    mode: 0600
+  vhost-vsock:
+    path: /dev/vhost-vsock
+    type: unix-char

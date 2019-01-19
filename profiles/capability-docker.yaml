@@ -1,0 +1,9 @@
+description: Profile supporting docker in containers
+config:
+  linux.kernel_modules: overlay, nf_nat
+  security.nesting: "true"
+devices:
+  aadisable:
+    path: /sys/module/apparmor/parameters/enabled
+    source: /dev/null
+    type: disk

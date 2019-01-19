@@ -1,0 +1,5 @@
+description: Compute profile having 4 cores and 8 GB RAM
+config:
+  limits.cpu: 4 
+  limits.memory: 8GB
+  limits.memory.swap: no

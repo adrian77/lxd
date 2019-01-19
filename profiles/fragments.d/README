@@ -1,0 +1,3 @@
+These file are related to the capability profiles.
+The configuration is needed in order to use the capability in the container.
+The method of configuration can differ. Use cloud init, or run these commands after the container has started and them publish new images.   
