@@ -1,6 +1,6 @@
 config:
   security.nesting: "true"
-  linux.kernel_modules: iptable_nat, ip6table_nat, ebtables, kvm, kvm_intel, tap
+  linux.kernel_modules: iptable_nat, ip6table_nat, ebtables, kvm, kvm_intel, tap, vhost_net
 devices:
   kvm:
     path: /dev/kvm
@@ -8,3 +8,7 @@ devices:
   tun:
     path: /dev/net/tun
     type: unix-char
+  vhost-net:
+    path: /dev/vhost-net
+    type: unix-char
+    mode: 0600

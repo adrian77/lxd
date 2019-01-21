@@ -1,0 +1,4 @@
+[[ -z $1 ]] && exit 1
+lxc launch --profile root-disk \
+           --profile compute-1c_256M \
+           ubuntu:18.04  $1 

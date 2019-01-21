@@ -1,0 +1,8 @@
+<pool type='dir'>
+  <name>vm-images</name>
+  <source>
+  </source>
+  <target>
+    <path>/mnt/images</path>
+  </target>
+</pool>

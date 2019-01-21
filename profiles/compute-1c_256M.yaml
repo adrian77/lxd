@@ -1,0 +1,5 @@
+description: Compute profile having minimum resources 
+config:
+  limits.cpu: 1 
+  limits.memory: 256MB
+  limits.memory.swap: no

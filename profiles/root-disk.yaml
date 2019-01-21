@@ -1,0 +1,6 @@
+description: Root disk from the default pool 
+devices:
+  root:
+    path: /
+    pool: new-default-pool
+    type: disk

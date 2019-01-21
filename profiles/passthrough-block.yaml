@@ -1,0 +1,5 @@
+devices:
+  rawblock: 
+    type: unix-block
+    source: /dev/mastervg/root-mint-19-2nd
+    path: /dev/vm1
