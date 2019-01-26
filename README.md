@@ -14,6 +14,9 @@ LXD profiles and examples. This repo contains lxc profiles to create different b
 `cd <directory` to look what is inside each directory.
 
 ## Todo
-- [x] Finish my changes
-- [ ] Next task
-- [ ] Next task again
+- [x] Example of passthrough of a lvm volume
+- [ ] Example of passthrough of IOMMU group of mouse & keyboard (extra mouse & keyboard attached where host does not load kernel driver for it) 
+- [ ] Example of passthrough of GPU in multi GPU setup where LXC/KVM using that gpu and monitor output.
+- [ ] Profile with network sitting directly to switch. (macvtap)
+- [ ] Profile with network managed by dedicated wifi dongle (perhap IOMMU passthough is needed)
+- [ ] Profile with TOR network
