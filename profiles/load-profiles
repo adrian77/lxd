@@ -1,0 +1,10 @@
+#!/bin/bash
+files=$(find -maxdepth 1 -name '*.yaml')
+#| xargs -I {} bash -c "echo {} | cut -d "/" -f2 | cut -d "." -f1; lxc edit {}"
+for file in $files;
+do
+  profile=$(echo $file | cut -d "/" -f2 | cut -d "." -f1)
+  echo $profile
+  lxc profile create $profile
+  lxc profile edit $profile < $file 
+done  
