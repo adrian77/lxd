@@ -2,7 +2,6 @@
 lxc launch --profile default \
            --profile capability-gui \
            --profile capability-kvm \
-           --profile capability-tipc \
            --profile compute-4c_8G \
            --profile disk-vm_images \
-           18aea0d14844 $1 
+           ubuntu-desktop $1 
