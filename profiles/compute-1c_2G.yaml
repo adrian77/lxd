@@ -1,4 +1,4 @@
-description: Compute profile having 4 cores and 8 GB RAM 
+description: Compute profile having 1 core and 2 GB RAM 
 config:
   limits.cpu: 1 
   limits.memory: 2GB

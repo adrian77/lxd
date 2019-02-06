@@ -1,3 +1,4 @@
+description: Example profile how to pass a block device to container 
 devices:
   rawblock: 
     type: unix-block

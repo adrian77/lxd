@@ -1,3 +1,4 @@
+description: Profile to allow kvm/qemu to launch virtual machines.
 config:
   security.nesting: "true"
   linux.kernel_modules: iptable_nat, ip6table_nat, ebtables, kvm, kvm_intel, tap, vhost_net
