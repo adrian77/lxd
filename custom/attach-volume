@@ -1,1 +1,1 @@
-lxc storage volume attach new-default-pool vm-images ubuntu-desktop /var/lib/libvirt/image
+lxc storage volume attach new-default-pool vm-disks $1 /var/lib/libvirt/images
