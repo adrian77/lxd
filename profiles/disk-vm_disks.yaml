@@ -2,7 +2,7 @@ description: Persistent location of the virtual disks of libvirt vms
 devices:
   vmdisks:
     path: /var/lib/libvirt/images
-    pool: new-default-pool
+    pool: default
     source: vm-disks
     type: disk
 
