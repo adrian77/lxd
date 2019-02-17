@@ -1,0 +1,2 @@
+device=/dev/mapper/mastervg-lxd--storage
+lxc storage create default btrfs source=$device

@@ -1,1 +1,1 @@
-lxc storage volume attach new-default-pool vm-disks $1 /var/lib/libvirt/images
+lxc storage volume attach default vm-disks $1 /var/lib/libvirt/images

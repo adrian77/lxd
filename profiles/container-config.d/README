@@ -1,6 +1,6 @@
 This is configuration template to be applied to a container in order to use certain profile capabilities.
 The configuration is needed in order to use the capability in the container.
-The method of configuration can differ. 
- - Use cloud init
- - Run these commands after the container has started and them publish new images.   
+Different method of injection can be used:
+ - Using cloud init
+ - Run these commands after the container has started and then publish new images. Then start containers from that image with the profile applied.   
  - Overlay configuration files as mounts 

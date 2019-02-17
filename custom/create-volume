@@ -1,1 +1,1 @@
-lxc storage volume create new-default-pool vm-disks
+lxc storage volume create default vm-disks

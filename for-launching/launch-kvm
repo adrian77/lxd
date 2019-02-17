@@ -1,5 +1,7 @@
 [[ -z $1 ]] && exit 1
 lxc launch --profile default \
+           --profile disk-root \
            --profile capability-kvm \
+           --profile capability-gui \
            --profile disk-vm_images \
            local:image-kvm $1 

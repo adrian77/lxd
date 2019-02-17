@@ -1,5 +1,6 @@
 [[ -z $1 ]] && exit 1
 lxc launch --profile default \
+           --profile disk-root \
            --profile capability-gui \
            --profile capability-kvm \
            --profile compute-4c_8G \
