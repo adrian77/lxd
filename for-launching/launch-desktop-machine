@@ -5,4 +5,5 @@ lxc launch --profile default \
            --profile capability-kvm \
            --profile compute-4c_8G \
            --profile disk-vm_images \
+           --profile disk-vm_disks \
            ubuntu-desktop $1 
