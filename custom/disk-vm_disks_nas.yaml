@@ -1,0 +1,5 @@
+devices:
+  vmimages:
+    path: /mnt/images-nas
+    source: /media/powernas/media/1TB/disk-images
+    type: disk
